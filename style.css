@@ -82,6 +82,35 @@ p {
   text-align: center;
   color: var(--muted);
 }
+.section {
+  margin-bottom: 2rem;
+}
+
+.about {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
 
 @keyframes fadeIn {
   from {
