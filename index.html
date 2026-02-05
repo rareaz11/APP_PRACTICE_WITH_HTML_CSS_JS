@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice SPA</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header>
+        <h1>Practice SPA 🚀</h1>
+        <nav>
+          <button onclick="showPage('home')">Home</button>
+          <button onclick="showPage('food')">Hrana</button>
+          <button onclick="showPage('planes')">Avioni</button>
+        </nav>
+      </header>
+
+      <main id="content" class="card"></main>
+    </div>
+
+    <script>
+      const content = document.getElementById("content");
+
+      const pages = {
+        home: `
+        <h2>Dobrodošao 👋</h2>
+        <p>
+          Ova aplikacija služi za vježbanje GitHuba, Netlify deploya
+          i rada s čistim HTML, CSS i JavaScriptom.
+        </p>
+        <div class="placeholder">
+          Ovdje kasnije možeš dodati routing, state, animacije…
+        </div>
+      `,
+        food: `
+        <h2>🍕 Hrana API</h2>
+        <p>
+          Ovdje ćeš dohvaćati podatke o hrani (npr. recepte, kalorije).
+        </p>
+        <div class="placeholder">
+          fetch() → Food API → render u DOM
+        </div>
+      `,
+        planes: `
+        <h2>✈️ Avioni API</h2>
+        <p>
+          Prikaz letova, visine, brzine ili random aviona.
+        </p>
+        <div class="placeholder">
+          Idealno za OpenSky ili sličan API
+        </div>
+      `,
+      };
+
+      function showPage(page) {
+        content.innerHTML = pages[page];
+      }
+
+      // default page
+      showPage("home");
+    </script>
+  </body>
+</html>
